@@ -1,7 +1,7 @@
 public class codingChallenge2
 {
     //    a)
-//    public String printNumberInWord(int num)
+//    public static String printNumberInWord(int num)
 //    {
 //        if(num==0)
 //        {
@@ -49,7 +49,7 @@ public class codingChallenge2
 //        return "num";
 //    }
     //    b)
-    public String printNumberInWord(int num)
+    public static String printNumberInWord(int num)
     {
         switch (num)
         {
@@ -87,5 +87,9 @@ public class codingChallenge2
                 System.out.println("OTHER");
         }
         return "num";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(printNumberInWord(5));
     }
 }
