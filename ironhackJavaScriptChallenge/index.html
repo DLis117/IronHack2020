@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptchallenge2021</title>
+</head>
+<body>
+    <div class="ramka">
+    <input type="text" id="display" readonly value="0">
+        <div class="k1">
+            <button id="b1">1</button>
+            <button id="b2">2</button>
+            <button id="b3">3</button>
+            <button id="b+">+</button>
+        </div>
+        <div class="k2">
+            <button id="b4">4</button>
+            <button id="b5">5</button>
+            <button id="b6">6</button>
+            <button id="b-">-</button>
+        </div>
+        <div class="k3">      
+            <button id="b7">7</button>
+            <button id="b8">8</button>
+            <button id="b9">9</button>
+            <button id="bx">x</button>
+        </div>
+        <div class="k4">
+            <button id="bc">c</button>
+            <button id="b0">0</button>
+            <button id="b=">=</button>
+            <button id="b/">/</button>
+        </div>
+        
+    </div>
+    <style>
+    .ramka
+    {
+        height: 200px;
+        width:200px;
+        background-color: gainsboro;
+    }
+    #display
+    {
+        display: inline-block;
+        margin: 8%;
+    }
+    button
+    {
+        width: 22%;
+        transition: all ease 0.5s;
+    }
+    button:hover
+    {
+        background-color:darkgrey;
+    }
+    .k1,.k2,.k3,.k4
+    {
+        margin: 0 20%;
+    }
+    </style>
+    <script>
+        var disp="0";
+        var disp2="";
+        var first=true;
+        var sym;
+        
+        
+                document.getElementById("b1").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="1";
+                        }
+                        else 
+                        {
+                            disp+="1";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="1";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b2").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="2";
+                        }
+                        else 
+                        {
+                            disp+="2";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="2";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b3").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="3";
+                        }
+                        else 
+                        {
+                            disp+="3";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="3";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b4").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="4";
+                        }
+                        else 
+                        {
+                            disp+="4";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="4";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b5").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="5";
+                        }
+                        else 
+                        {
+                            disp+="5";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="5";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b6").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="6";
+                        }
+                        else 
+                        {
+                            disp+="6";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="6";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b7").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="7";
+                        }
+                        else 
+                        {
+                            disp+="7";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="7";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b8").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="8";
+                        }
+                        else 
+                        {
+                            disp+="8";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="8";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b9").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="9";
+                        }
+                        else 
+                        {
+                            disp+="9";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="9";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+                document.getElementById("b0").addEventListener("click",function()
+                {
+                    if(first==true)
+                    {
+                        if(disp=="0")
+                        {
+                            disp="0";
+                        }
+                        else 
+                        {
+                            disp+="0";
+                        }
+                        document.getElementById("display").value=disp;
+                    }
+                    else
+                    {
+                        disp2+="0";
+                        document.getElementById("display").value=disp2;
+                    }
+                })
+        
+                document.getElementById("b+").addEventListener("click",function(){sym="+";first=false;})
+                document.getElementById("b-").addEventListener("click",function(){sym="-";first=false;})
+                document.getElementById("bx").addEventListener("click",function(){sym="x";first=false;})
+                document.getElementById("b/").addEventListener("click",function(){sym="/";first=false;})
+        
+                document.getElementById("bc").addEventListener("click",function(){disp="0";document.getElementById("display").value=disp;first=true;disp2="";sym="";})
+                document.getElementById("b=").addEventListener("click",function()
+                {
+                    disp=parseInt(disp);
+                    disp2=parseInt(disp2);
+                    if(sym=="+")
+                    {
+                        disp+=disp2;
+                    }
+                    else if(sym=="-")
+                    {
+                        disp-=disp2;
+                    }
+                    else if(sym=="x")
+                    {
+                        disp*=disp2;
+                    }
+                    else if(sym=="/")
+                    {
+                        disp/=disp2;
+                    }
+                    disp2="";sym="";
+                    document.getElementById("display").value=disp.toString();
+                    disp=disp.toString();
+                })
+        
+                
+//        var disp=document.getElementById("display").value=disp;
+//        var b1=document.getElementById("b1").value
+//        console.log(b1.toString())
+    </script>
+</body>
+</html>
