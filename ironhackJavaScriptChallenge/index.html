@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptchallenge2021</title>
+</head>
+<body>
+    <div class="ramka">
+    <input type="text" id="display" readonly value="0">
+        <div class="k1">
+            <button id="b1">1</button>
+            <button id="b2">2</button>
+            <button id="b3">3</button>
+            <button id="b+">+</button>
+        </div>
+        <div class="k2">
+            <button id="b4">4</button>
+            <button id="b5">5</button>
+            <button id="b6">6</button>
+            <button id="b-">-</button>
+        </div>
+        <div class="k3">      
+            <button id="b7">7</button>
+            <button id="b8">8</button>
+            <button id="b9">9</button>
+            <button id="bx">x</button>
+        </div>
+        <div class="k4">
+            <button id="bc">c</button>
+            <button id="b0">0</button>
+            <button id="b=">=</button>
+            <button id="b/">/</button>
+        </div>
+        
+    </div>
+    <style>
+    .ramka
+    {
+        height: 200px;
+        width:200px;
+        background-color: gainsboro;
+    }
+    #display
+    {
+        display: inline-block;
+        margin: 8%;
+    }
+    button
+    {
+        width: 22%;
+        transition: all ease 0.5s;
+    }
+    button:hover
+    {
+        background-color:darkgrey;
+    }
+    .k1,.k2,.k3,.k4
+    {
+        margin: 0 20%;
+    }
+    </style>
+    <script>
+        var disp="0";
+        
+                document.getElementById("b1").addEventListener("click",function()
+            {if(disp=="0")
+            {
+                disp="1";
+            }
+        else {disp+="1"};document.getElementById("display").value=disp;})
+                document.getElementById("b2").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="2";
+            }
+        else disp+="2";document.getElementById("display").value=disp;})
+                document.getElementById("b3").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="3";
+            }
+        else disp+="3";document.getElementById("display").value=disp;})
+                document.getElementById("b4").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="4";
+            }
+        else disp+="4";document.getElementById("display").value=disp;})
+                document.getElementById("b5").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="5";
+            }
+        else disp+="5";document.getElementById("display").value=disp;})
+                document.getElementById("b6").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="6";
+            }
+        else disp+="6";document.getElementById("display").value=disp;})
+                document.getElementById("b7").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="7";
+            }
+        else disp+="7";document.getElementById("display").value=disp;})
+                document.getElementById("b8").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="8";
+            }
+        else disp+="8";document.getElementById("display").value=disp;})
+                document.getElementById("b9").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="9";
+            }
+        else disp+="9";document.getElementById("display").value=disp;})
+                document.getElementById("b0").addEventListener("click",function(){if(disp=="0")
+            {
+                disp="0";
+            }
+        else disp+="0";document.getElementById("display").value=disp;})
+                
+                document.getElementById("b+").addEventListener("click",function(){disp+="+";document.getElementById("display").value=disp;})
+                document.getElementById("b-").addEventListener("click",function(){disp+="-";document.getElementById("display").value=disp;})
+                document.getElementById("bx").addEventListener("click",function(){disp+="x";document.getElementById("display").value=disp;})
+                document.getElementById("b/").addEventListener("click",function(){disp+="/";document.getElementById("display").value=disp;})
+        
+                document.getElementById("bc").addEventListener("click",function(){disp="0";document.getElementById("display").value=disp;})
+                document.getElementById("b=").addEventListener("click",function()
+                {
+                    var l1="";var l2="";var pos=0;var sym;
+                    
+                    for (i=0;i<disp.length;++i)
+                    {
+                        if(disp[i]!="+"&&disp[i]!="-"&&disp[i]!="x"&&disp[i]!="/")
+                        {
+                            l1+=disp[i];
+                        }
+                        else
+                        {
+                            pos=i;
+                            sym=disp[i];
+                            break;
+                        }
+                    }
+                    for(i=pos+1;i<disp.length;++i)
+                    {
+                        l2+=disp[i];
+                    }
+                    l1=parseInt(l1);
+                    l2=parseInt(l2);
+                    if(sym=="+")
+                    {
+                        l1+=l2;
+                    }
+                    else if(sym=="-")
+                    {
+                        l1-=l2;
+                    }
+                    else if(sym=="x")
+                    {
+                        l1*=l2;
+                    }
+                    else if(sym=="/")
+                    {
+                        l1/=l2;
+                    }
+                    document.getElementById("display").value=l1.toString();
+                    disp=l1.toString();
+                })
+        
+                
+//        var disp=document.getElementById("display").value=disp;
+//        var b1=document.getElementById("b1").value
+//        console.log(b1.toString())
+    </script>
+</body>
+</html>
